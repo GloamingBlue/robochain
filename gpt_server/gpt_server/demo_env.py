@@ -1,7 +1,7 @@
 import numpy as np
 
 from robopal.envs import RobotEnv
-from robopal.robots.diana_med import DianaGraspMultiObjs
+from robopal.robots.diana_med import DianaCollide  # DianaGraspMultiObjs
 
 def primitive(func, checker=None):
     """ primitive flag, no practical effect. """
@@ -14,7 +14,7 @@ def primitive(func, checker=None):
 
 class GraspingEnv(RobotEnv):
     def __init__(self,
-                 robot=DianaGraspMultiObjs,
+                 robot=DianaCollide,  # DianaGraspMultiObjs
                  render_mode="human",
                  control_freq=20,
                  is_interpolate=False,

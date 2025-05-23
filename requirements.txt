@@ -1,5 +1,6 @@
 numpy
 langchain
+langchain-openai
 langchain-community
 langchain-core
 tiktoken
