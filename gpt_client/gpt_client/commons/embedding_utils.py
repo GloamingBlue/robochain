@@ -6,9 +6,11 @@ EMBEDDING_MODEL = 1  # O for OpenAIEmbeddings and 1 for HuggingFaceEmbeddings
 if EMBEDDING_MODEL == 0:
     from langchain_community.embeddings.openai import OpenAIEmbeddings
 elif EMBEDDING_MODEL == 1:
-    from langchain_community.embeddings import HuggingFaceEmbeddings
+    # 修改导入语句，使版本兼容
+    # from langchain_community.embeddings import HuggingFaceEmbeddings
+    from langchain_huggingface import HuggingFaceEmbeddings
 
-VECTOR_STORE = 1  # 0 for Pinecone and 1 for Chroma
+VECTOR_STORE = 1  # 0 for Pinecone and 1 for Chroma,选择向量数据库Pinecone或者Chroma
 if VECTOR_STORE == 0:
     import pinecone
     from langchain_community.vectorstores import Pinecone

@@ -29,7 +29,7 @@ class GPTAssistant:
 
         logging.info("Initialize LLM...")
         llm = ChatOpenAI(
-            model="gpt-3.5-turbo",
+            model="claude-3-5-sonnet-20241022",
             temperature=0.1,
             max_tokens=2048,
         )
